@@ -1,60 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="app.js" defer></script>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | News homepage</title>
+    <title>News homepage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header flex flex-col">
+      <div class="flex justify-between items-center">
+        <div class="header__logo">
+          <img src="logo.svg" alt="news logo" />
+        </div>
+        <nav class="primary-nav">
+          <ul
+            class="primary-nav__items flex items-center gap-1 text-neutral-200"
+          >
+            <li>
+              <a href="#" class="primary-nav__item">Home</a>
+            </li>
+            <li>
+              <a href="#" class="primary-nav__item">New</a>
+            </li>
+            <li>
+              <a href="#" class="primary-nav__item">Popular</a>
+            </li>
+            <li>
+              <a href="#" class="primary-nav__item">Trending</a>
+            </li>
+            <li>
+              <a href="#" class="primary-nav__item">Categories</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Home
-  New
-  Popular
-  Trending
-  Categories
-
-  The Bright Future of Web 3.0?
-
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
-
-  Read more
-
-  New 
-
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <main>
+      <section class="about">
+        <picture class="about__web">
+          <source
+            width="100%"
+            srcset="image-web-3-desktop.jpg"
+            media="(min-width:1280px)"
+          />
+          <img width="100%" src="image-web-3-mobile.jpg" alt="" />
+        </picture>
+        <div class="about__content">
+          <h1 class="about__title text-neutral-250 font-bolder">
+            The Bright Future of Web 3.0?
+          </h1>
+          <p class="about__description text-neutral-200">
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <button class="about__btn bg-primary-200 text-neutral-100">
+            Read more
+          </button>
+        </div>
+        <section class="newsletter bg-neutral-250">
+          <h2 class="newsletter__title text-primary-100 font-bolder">New</h2>
+          <div class="newsletter__content">
+            <h3 class="newsletter__subtitle">
+              <a href="#" class="text-neutral-100 font-bold"
+                >Hydrogen VS Electric Cars</a
+              >
+            </h3>
+            <p class="newsletter__description text-neutral-150">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+            <div class="newsletter__breakline bg-neutral-200"></div>
+          </div>
+          <div class="newsletter__content">
+            <h3 class="newsletter__subtitle text-neutral-100 font-bold">
+              <a href="#" class="text-neutral-100 font-bold"
+                >The Downsides of AI Artistry</a
+              >
+            </h3>
+            <p class="newsletter__description text-neutral-150">
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+            <div class="newsletter__breakline bg-neutral-200"></div>
+          </div>
+          <div class="newsletter__content">
+            <h3 class="newsletter__subtitle text-neutral-100 font-bold">
+              <a href="" class="text-neutral-100 font-bold"
+                >Is VC Funding Drying Up?</a
+              >
+            </h3>
+            <p class="newsletter__description text-neutral-150">
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </section>
+      </section>
+      <section class="hero">
+        <div class="hero__content grid">
+          <div>
+            <img src="image-retro-pcs.jpg" alt="" class="hero__img" />
+          </div>
+          <div class="flex flex-col">
+            <h2 class="hero__number text-neutral-150 font-bolder">01</h2>
+            <h3 class="hero__title text-neutral-250 font-bold">
+              Reviving Retro PCs
+            </h3>
+            <p class="hero__description text-neutral-200">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </div>
+        <div class="hero__content grid">
+          <div>
+            <img src="image-top-laptops.jpg" alt="" class="hero__img" />
+          </div>
+          <div class="flex flex-col">
+            <h2 class="hero__number text-neutral-150 font-bolder">02</h2>
+            <h3 class="hero__title text-neutral-250 font-bold">
+              Top 10 Laptops of 2022
+            </h3>
+            <p class="hero__description text-neutral-200">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </div>
+        <div class="hero__content grid">
+          <div>
+            <img src="image-gaming-growth.jpg" alt="" class="hero__img" />
+          </div>
+          <div class="flex flex-col">
+            <h2 class="hero__number text-neutral-150 font-bolder">03</h2>
+            <h3 class="hero__title text-neutral-250 font-bold">
+              The Growth of Gaming
+            </h3>
+            <p class="hero__description text-neutral-200">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
